@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hackers Hub</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" th:href="@{/css/index/index.css}">
+        <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-3 mb-5">Hackers Hub</h1>
+            <div class="items">
+                <div class="item">
+                    <h2 class="item-title mb-2">1.Command Injection</h2>
+                    <p class="item-msg">OS command injection (also known as shell injection) is a web security vulnerability that allows an attacker to execute arbitrary operating system (OS) commands on the server that is running an application, and typically fully compromise the application and all its data. Very often, an attacker can leverage an OS command injection vulnerability to compromise other parts of the hosting infrastructure, exploiting trust relationships to pivot the attack to other systems within the organization.</p>
+                    <div class="item-button d-flex justify-content-between">
+                        <a class="item-link" th:href="@{/command-injection}">Go to topic</a>
+                        <p>14 Labs</p>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <h2 class="item-title mb-2">2.SQL Injection</h2>
+                    <p class="item-msg">SQL injection is an old-but-gold vulnerability responsible for many high-profile data breaches. Although relatively simple to learn, it can potentially be used for some high-severity exploits. This
+                        makes it an ideal first topic for beginners, and essential knowledge even for more experienced users</p>
+                    <div class="item-button d-flex justify-content-between">
+                        <a class="item-link">Go to topic</a>
+                        <p>14 Labs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
