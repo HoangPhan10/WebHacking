@@ -16,10 +16,19 @@
                     <h3>Lab1:Blind OS command injection with output redirection</h3>
                     <p>To solve the lab, execute the <mark>whoami</mark> command and retrieve the output.</p>
                     <div class="d-flex justify-content-xl-start">
-                        <p id="button-hint">Hint</p>
-                        <p id="msg-hint" class="mx-3"> /var/www/images</p>
+                        <p id="button-hint" class="button-hint">Hint</p>
+                        <p id="msg-hint" class="mx-3 msg-hint"> /var/www/images</p>
                     </div>
                     <a class="item-lab-link" th:href="@{/command-injection/lab1}">Access the lab</a>
+                </div>
+                <div class="item-lab">
+                    <h3>Lab2:Command Injection Vulnerability</h3>
+                    <p>To solve the lab, execute the <mark>whoami</mark> command and retrieve the output.</p>
+                    <div class="d-flex justify-content-xl-start">
+                        <p id="button-hint2" class="button-hint">Hint</p>
+                        <p id="msg-hint2" class="mx-3 msg-hint">Reverse shell</p>
+                    </div>
+                    <a class="item-lab-link" th:href="@{/command-injection/lab2}">Access the lab</a>
                 </div>
             </div>
         </div>
@@ -28,6 +37,9 @@
 <script>
     document.getElementById("button-hint").onclick = function() {
         document.getElementById("msg-hint").style.display="block";
+    };
+    document.getElementById("button-hint2").onclick = function() {
+        document.getElementById("msg-hint2").style.display="block";
     };
 
 </script>
