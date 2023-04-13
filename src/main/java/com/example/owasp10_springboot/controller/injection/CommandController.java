@@ -1,11 +1,10 @@
-package com.example.owasp10_springboot.controller;
+package com.example.owasp10_springboot.controller.injection;
 
 import com.example.owasp10_springboot.DTO.CmdDTO;
 import com.example.owasp10_springboot.implementService.ImplCMDInjectionService;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,24 +17,25 @@ import java.util.List;
 
 @Controller
 @Slf4j
-public class CmdInjectionController {
+
+public class CommandController {
     private ImplCMDInjectionService implCMDInjectionService;
-    public CmdInjectionController() {
+    public CommandController() {
         this.implCMDInjectionService = new ImplCMDInjectionService();
     }
     @GetMapping("/command-injection")
     public String getCommandInjection(){
-        return "commandInjection/index";
+        return "injection/command/index";
     }
     @GetMapping("/command-injection/lab1")
     public String getCommandInjectionLab1(Model model){
         model.addAttribute("CmdDTO",new CmdDTO(""));
-        return "commandInjection/lab1/index";
+        return "injection/command/lab1/index";
     }
     @GetMapping("/command-injection/lab2")
     public String getCommandInjectionLab2(Model model){
         model.addAttribute("CmdDTO",new CmdDTO(""));
-        return "commandInjection/lab2/index";
+        return "injection/command/lab2/index";
     }
     @PostMapping(path = "/command-injection/lab1")
     public String postCommandInjectionLab1(CmdDTO cmdDTO,Model model){
@@ -43,7 +43,7 @@ public class CmdInjectionController {
         String regex = "^[a-zA-Z0-9 .;>/]*$";
         if (!cmdDTO.getCmd().startsWith("127.0.0.1")|!cmdDTO.getCmd().matches(regex)){
             model.addAttribute("error","PING Error");
-            return "commandInjection/lab1/index";
+            return "injection/command/lab1/index";
         }
 
         List<String> results = implCMDInjectionService.runShell(cmdDTO.getCmd());
@@ -51,7 +51,7 @@ public class CmdInjectionController {
             log.info(str);
         }
         model.addAttribute("success","PING Successfully");
-        return "commandInjection/lab1/index";
+        return "injection/command/lab1/index";
     }
     @PostMapping(path = "/command-injection/lab2")
     public String postCommandInjectionLab2(CmdDTO cmdDTO,Model model){
@@ -61,7 +61,7 @@ public class CmdInjectionController {
         System.out.print(cmdDTO.getCmd().matches(regex));
         if (!cmdDTO.getCmd().startsWith("127.0.0.1")|!cmdDTO.getCmd().matches(regex)){
             model.addAttribute("error","PING Error");
-            return "commandInjection/lab2/index";
+            return "injection/command/lab2/index";
         }
 
         List<String> results = implCMDInjectionService.runShell(cmdDTO.getCmd());
@@ -69,7 +69,7 @@ public class CmdInjectionController {
             log.info(str);
         }
         model.addAttribute("success","PING Successfully");
-        return "commandInjection/lab2/index";
+        return "injection/command/lab2/index";
     }
     @GetMapping("/")
     public String getHome(){
