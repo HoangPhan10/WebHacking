@@ -80,7 +80,7 @@ public class CommandController {
         try {
             String regex = "^.+(\\.jpeg|\\.jpg|\\.txt)$";
             if (filename.matches(regex)){
-                File file = new File("/var/www/images/" + filename);
+                File file = new File("/var/tmp/images/" + filename);
                 InputStream is = new FileInputStream(file);
                 IOUtils.copy(is, response.getOutputStream());
                 response.flushBuffer();

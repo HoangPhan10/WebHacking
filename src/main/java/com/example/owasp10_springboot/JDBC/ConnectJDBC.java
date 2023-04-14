@@ -11,9 +11,9 @@ public class ConnectJDBC {
     public Connection getConnection(){
         Connection connection = null;
         try{
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            String url = "jdbc:mysql://localhost:3306/owasp10?createDatabaseIfNotExist=true";
-            String username = "phanhoang";
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+            String url = "jdbc:mysql://localhost:3306/owasp102?createDatabaseIfNotExist=true";
+            String username = "root";
             String password = "10022002";
             connection = DriverManager.getConnection(url,username,password);
 
