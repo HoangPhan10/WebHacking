@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-between">
+        <div>
+            <img src="/images?filename=avatar1.jpg" alt="image" width="400" height="400"/>
+        </div>
+        <div>
+            <img src="/images?filename=avatar2.jpg" alt="image" width="400" height="400"/>
+        </div>
+        <div>
+            <img src="/images?filename=avatar3.jpg" alt="image" width="400" height="400"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
