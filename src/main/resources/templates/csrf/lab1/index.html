@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Command Injection</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <!--  <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">-->
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="d-flex justify-content-center w-100">
+    <div class="w-50">
+        <h1 class="text-center">Thêm công việc cho ngày hôm nay</h1>
+        <form method="POST" th:object="${work}" th:action="@{/csrf/lab1/works}">
+            <input th:field="*{work}" class="w-50" type="text"/>
+            <button type="submit" class="w-25">Thêm</button>
+        </form>
+        <ul>
+            <th:block th:each="state : ${works}">
+                <li th:utext="${state.getMessage()}">..</li>
+            </th:block>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

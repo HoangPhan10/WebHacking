@@ -33,16 +33,6 @@ public class SqlController {
 
     @GetMapping("")
     public String sqlInjection() throws SQLException {
-//        List<User> users = new ArrayList<>();
-//        User user1 = new User();
-//        user1.setPassword("Tha98_all_of_man");
-//        user1.setUsername("administrator");
-//        users.add(user1);
-//        User user2 = new User();
-//        user2.setPassword("test!");
-//        user2.setUsername("test");
-//        users.add(user2);
-//        userRepository.saveAll(users);
         return "injection/sql/index";
     }
 

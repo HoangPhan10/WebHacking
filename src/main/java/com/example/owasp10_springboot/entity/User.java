@@ -20,4 +20,6 @@ public class User {
     private String username;
     @Column(name = "password_flag")
     private String password;
+    @Column(name="session_id")
+    private String sessionId;
 }
