@@ -25,7 +25,7 @@ jobs:
         run: mvn clean install -DskipTests
       - name: Package with ScanCentral
         run: |
-          curl -L -o scancentral.zip https://github.com/fortify/scancentral/releases/download/v25.4.0/scancentral-client.zip
+          curl -L -o scancentral.zip https://trial.fortify.com/Tools/scancentral-client.zip
           unzip scancentral.zip -d scancentral
           ./scancentral/bin/scancentral package -o package.zip -mvn -exclude target,test,node_modules
 
