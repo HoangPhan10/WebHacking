@@ -21,14 +21,6 @@ jobs:
           java-version: 17
           distribution: 'temurin'
 
-      - name: Build with Maven
-        run: mvn clean install -DskipTests
-      - name: Package with ScanCentral
-        run: |
-          curl -L -o scancentral.zip https://trial.fortify.com/Tools/scancentral-client.zip
-          unzip scancentral.zip -d scancentral
-          ./scancentral/bin/scancentral package -o package.zip -mvn -exclude target,test,node_modules
-
       # Perform Fortify on Demand SAST + SCA scan and import SAST results into GitHub code scanning alerts
       - name: Run Fortify on Demand SAST & SCA Scan
         uses: fortify/github-action@v2
@@ -41,8 +33,3 @@ jobs:
           FOD_USER: ${{secrets.FOD_USER}}
           FOD_PASSWORD: ${{secrets.FOD_PAT}}
           FOD_RELEASE: 251853
-          DO_EXPORT: true
-          DO_SETUP: true
-          DO_JOB_SUMMARY: true
-          DO_PR_COMMENT: true
-          #DO_POLICY_CHECK: true
