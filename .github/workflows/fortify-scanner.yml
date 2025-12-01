@@ -14,9 +14,6 @@ jobs:
       - name: Check Out Source Code
         uses: actions/checkout@v4
 
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v2
-        
       # Java is required to run the various Fortify utilities. Ensuring proper version is installed on the runner.
       - name: Setup Java
         uses: actions/setup-java@v4
