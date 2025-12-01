@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE user[
+<!ENTITY x0 "ha!">
+<!ENTITY x1 "&x0;&x0;">
+<!ENTITY x2 "&x1;&x1;">
+<!ENTITY x3 "&x2;&x2;)">
+<!-- Entities from x4 to x98... -->
+<!ENTITY x99 "&x98;&x98;">
+<!ENTITY x100 "&x99;&x99;">
+]>
+<users>
+    <user uid="&x100;"/>
+</users>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>CSRF</title>
+  <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">
+  <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="command-injection">
+  <h1 class="text-center mt-3 mb-5">Cross-site request forgery</h1>
+  <div>
+    <div class="item">
+      <div class="item-lab">
+        <h3>Lab1: CSRF vulnerability with no defenses</h3>
+        <a class="item-lab-link" th:href="@{/csrf/lab1}">Access the lab</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  document.getElementById("button-hint").onclick = function() {
+    document.getElementById("msg-hint").style.display="block";
+  };
+  document.getElementById("button-hint2").onclick = function() {
+    document.getElementById("msg-hint2").style.display="block";
+  };
+
+</script>
+</html>

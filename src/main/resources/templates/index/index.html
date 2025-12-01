@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hackers Hub</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/index/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center mt-3 mb-5">Hackers Hub</h1>
+    <div class="items">
+        <div class="item">
+            <h2 class="item-title mb-2">1.Common Web Application Vulnerabilities and Security Risks</h2>
+            <p class="item-msg">This application contains multiple critical vulnerabilities including XSS, SQL
+                Injection, LDAP Injection, Code Injection, OS Command Injection, and more.
+                It is also exposed to CSRF, SSRF, Clickjacking, Open Redirect, brute-force login, session hijacking, and
+                file inclusion risks.
+                These weaknesses allow attackers to exploit input validation flaws, bypass authentication, and
+                compromise sensitive data.</p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/common-vuln}">Go to topic</a>
+                <p>24 Labs</p>
+            </div>
+        </div>
+        <div class="item">
+            <h2 class="item-title mb-2">2.Common Application Troubles and Risks</h2>
+            <p class="item-msg">
+                This section demonstrates frequent runtime issues such as deadlocks, livelocks, thread starvation, and
+                usage of non-thread-safe classes. It also covers infinite loops, redirect/forward loops, JVM crashes,
+                and various resource leaks including memory, sockets, database connections, and file descriptors.
+                These problems can lead to performance degradation, application instability, or complete system failure.
+            </p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/troubles}">Go to topic</a>
+                <p>23 Labs</p>
+            </div>
+        </div>
+        <div class="item">
+            <h2 class="item-title mb-2">3.Common Java Runtime Exceptions</h2>
+            <p class="item-msg">
+                This section introduces frequent exceptions encountered during Java application execution, such as
+                NullPointerException, ArrayIndexOutOfBoundsException, ClassCastException, and IllegalArgumentException.
+                It also covers concurrency-related issues like ConcurrentModificationException and
+                IllegalMonitorStateException,
+                as well as input/output errors including NumberFormatException, InputMismatchException, and
+                MissingResourceException.
+                Understanding these exceptions helps developers write robust code, improve error handling, and prevent
+                unexpected application crashes.
+            </p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/exceptions}">Go to topic</a>
+                <p>29 Labs</p>
+            </div>
+        </div>
+        <div class="item">
+            <h2 class="item-title mb-2">4.Common Java Errors</h2>
+            <p class="item-msg">
+                This section highlights critical errors that can occur during Java application execution, including
+                OutOfMemoryError, StackOverflowError, and AssertionError. It also covers linkage and initialization
+                issues
+                such as ExceptionInInitializerError, NoClassDefFoundError, and UnsatisfiedLinkError, as well as
+                configuration
+                problems like FactoryConfigurationError and TransformerFactoryConfigurationError. These errors often
+                indicate
+                serious problems in the JVM or application environment, requiring careful diagnosis and preventive
+                measures
+                to maintain system stability.
+            </p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/errors}">Go to topic</a>
+                <p>13 Labs</p>
+            </div>
+        </div>
+        <div class="item">
+            <h2 class="item-title mb-2">5.Command Injection</h2>
+            <p class="item-msg">OS command injection (also known as shell injection) is a web security vulnerability
+                that allows an attacker to execute arbitrary operating system (OS) commands on the server that is
+                running an application, and typically fully compromise the application and all its data. Very often, an
+                attacker can leverage an OS command injection vulnerability to compromise other parts of the hosting
+                infrastructure, exploiting trust relationships to pivot the attack to other systems within the
+                organization.</p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/command-injection}">Go to topic</a>
+                <p>2 Labs</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <h2 class="item-title mb-2">6.SQL Injection</h2>
+            <p class="item-msg">SQL injection is an old-but-gold vulnerability responsible for many high-profile data
+                breaches. Although relatively simple to learn, it can potentially be used for some high-severity
+                exploits. This
+                makes it an ideal first topic for beginners, and essential knowledge even for more experienced users</p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/sql-injection}">Go to topic</a>
+                <p>3 Labs</p>
+            </div>
+        </div>
+        <div class="item">
+            <h2 class="item-title mb-2">7.Cross-site request forgery (CSRF)</h2>
+            <p class="item-msg">Cross-site request forgery (also known as CSRF) is a web security vulnerability that
+                allows an attacker to induce users to perform actions that they do not intend to perform. It allows an
+                attacker to partly circumvent the same origin policy, which is designed to prevent different websites
+                from interfering with each other.</p>
+            <div class="item-button d-flex justify-content-between">
+                <a class="item-link" th:href="@{/csrf}">Go to topic</a>
+                <p>1 Labs</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

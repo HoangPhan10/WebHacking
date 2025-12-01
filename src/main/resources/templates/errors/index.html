@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Common Java Errors</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="command-injection">
+    <h1 class="text-center mt-3 mb-5">Common Java Errors</h1>
+    <div style="height:800px; overflow:auto; border:1px solid #ccc;">
+        <div class="item">
+
+            <!-- AssertionError -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab1: AssertionError</h3>
+                <p style="margin:5px 0;">Thrown when an assertion fails during runtime.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Learn how to use assertions correctly for debugging.</p>
+                <a class="item-lab-link" href="asserr" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- ExceptionInInitializerError / NoClassDefFoundError -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab2: ExceptionInInitializerError / NoClassDefFoundError</h3>
+                <p style="margin:5px 0;">Occurs when a static initializer fails or a class definition cannot be found.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Handle initialization errors and classpath issues.</p>
+                <a class="item-lab-link" href="eie" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- FactoryConfigurationError -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab3: FactoryConfigurationError</h3>
+                <p style="margin:5px 0;">Thrown when a factory configuration problem occurs, often in XML parsers.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Configure factories properly and handle errors gracefully.</p>
+                <a class="item-lab-link" href="fce" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- OutOfMemoryError (Java heap space) -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab4: OutOfMemoryError (Java heap space)</h3>
+                <p style="margin:5px 0;">Occurs when the JVM heap runs out of memory.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Profile memory usage and optimize allocations.</p>
+                <a class="item-lab-link" href="oome" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- OutOfMemoryError (Requested array size exceeds VM limit) -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab5: OutOfMemoryError (Requested array size exceeds VM limit)</h3>
+                <p style="margin:5px 0;">Thrown when an array size exceeds JVM limits.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate array sizes before allocation.</p>
+                <a class="item-lab-link" href="oome2" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- OutOfMemoryError (unable to create new native thread) -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab6: OutOfMemoryError (unable to create new native thread)</h3>
+                <p style="margin:5px 0;">Occurs when the JVM cannot create new threads due to resource limits.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Manage thread pools and system resources carefully.</p>
+                <a class="item-lab-link" href="oome3" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- OutOfMemoryError (GC overhead limit exceeded) -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab7: OutOfMemoryError (GC overhead limit exceeded)</h3>
+                <p style="margin:5px 0;">Thrown when GC spends too much time without freeing memory.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Optimize garbage collection and memory usage.</p>
+                <a class="item-lab-link" href="oome4" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- OutOfMemoryError (PermGen/Metaspace) -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab8: OutOfMemoryError (PermGen/Metaspace)</h3>
+                <p style="margin:5px 0;">Occurs when class metadata space is exhausted.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Manage classloading and metaspace usage.</p>
+                <a class="item-lab-link" href="oome5" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- OutOfMemoryError (Direct buffer memory) -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab9: OutOfMemoryError (Direct buffer memory)</h3>
+                <p style="margin:5px 0;">Thrown when direct byte buffer memory is exhausted.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Monitor and limit direct buffer allocations.</p>
+                <a class="item-lab-link" href="oome6" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- StackOverflowError -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab10: StackOverflowError</h3>
+                <p style="margin:5px 0;">Occurs when the call stack exceeds its limit, often due to infinite recursion.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Detect and prevent recursive loops.</p>
+                <a class="item-lab-link" href="sofe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- TransformerFactoryConfigurationError -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab11: TransformerFactoryConfigurationError</h3>
+                <p style="margin:5px 0;">Thrown when a transformer factory cannot be configured properly.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Configure XML transformer factories correctly.</p>
+                <a class="item-lab-link" href="tfce" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- UnsatisfiedLinkError -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab12: UnsatisfiedLinkError</h3>
+                <p style="margin:5px 0;">Occurs when a native library cannot be found or loaded.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Ensure native libraries are available and correctly linked.</p>
+                <a class="item-lab-link" href="jnicall" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <!-- ZipError -->
+            <div class="item-lab">
+                <h3 style="color:#2c3e50;">Lab13: ZipError</h3>
+                <p style="margin:5px 0;">Thrown when a problem occurs while reading or writing ZIP files.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Handle compressed file operations safely.</p>
+                <a class="item-lab-link" href="ze" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+        </div>
+    </div>
+</div>

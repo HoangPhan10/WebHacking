@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Injection</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="command-injection">
+    <h1 class="text-center mt-3 mb-5">Common Application Troubles and Risk Labs</h1>
+    <div style="height:800px; overflow:auto; border:1px solid #ccc;">
+        <div class="item">
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab1: Deadlock (Java)</h3>
+                <p style="margin:5px 0;">Two or more threads wait on each other’s locks, causing the system to halt.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Detect cycles, use lock ordering, and
+                    employ timeouts.</p>
+                <a class="item-lab-link" href="deadlock"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab2: Livelock (Java)</h3>
+                <p style="margin:5px 0;">Threads keep responding to each other without progress, consuming CPU but not
+                    completing work.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Introduce backoff and fairness to
+                    ensure forward progress.</p>
+                <a class="item-lab-link" href="livelock"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab3: Thread starvation</h3>
+                <p style="margin:5px 0;">Low-priority threads never get CPU time due to resource monopolization by
+                    others.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use fair locks and thread pools with
+                    balanced scheduling.</p>
+                <a class="item-lab-link" href="threadstarvation"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab4: Non-thread-safe class usage</h3>
+                <p style="margin:5px 0;">Shared mutable state leads to race conditions and unpredictable behavior.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Identify non-thread-safe components,
+                    add synchronization or use immutable types.</p>
+                <a class="item-lab-link" href="threadunsafe"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab5: Deadlock (SQL)</h3>
+                <p style="margin:5px 0;">Concurrent transactions lock rows in conflicting orders and block each
+                    other.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use consistent lock ordering and
+                    retries on deadlock.</p>
+                <a class="item-lab-link" href="deadlock2"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab6: Endless waiting process</h3>
+                <p style="margin:5px 0;">Threads wait indefinitely on signals or resources that never arrive.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Add timeouts and guard conditions to
+                    waits.</p>
+                <a class="item-lab-link" href="endlesswaiting"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab7: Infinite loop</h3>
+                <p style="margin:5px 0;">Faulty loop conditions keep executing forever, freezing the application.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate loop bounds and add
+                    safeguards.</p>
+                <a class="item-lab-link" href="infiniteloop"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab8: Redirect loop</h3>
+                <p style="margin:5px 0;">Misconfigured routes bounce requests back and forth indefinitely.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Trace redirect chains and enforce max
+                    redirect counts.</p>
+                <a class="item-lab-link" href="redirectloop"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab9: Forward loop</h3>
+                <p style="margin:5px 0;">Server-side forwards create cycles that never resolve a response.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate forward targets and break
+                    cycles.</p>
+                <a class="item-lab-link" href="forwardloop"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab10: JVM crash</h3>
+                <p style="margin:5px 0;">Native errors, stack overflow, or misconfigured agents cause hard JVM
+                    failure.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Capture hs_err logs, isolate native
+                    calls, and sandbox agents.</p>
+                <a class="item-lab-link" href="jvmcrasheav"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab11: Memory leak (Java heap)</h3>
+                <p style="margin:5px 0;">References retained unintentionally cause heap to grow until OOM.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use profilers, weak refs, and cleanup
+                    hooks.</p>
+                <a class="item-lab-link" href="memoryleak"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab12: Memory leak (Metaspace)</h3>
+                <p style="margin:5px 0;">Classloader churn and dynamic generation exhaust metaspace.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Reuse classloaders and limit bytecode
+                    generation.</p>
+                <a class="item-lab-link" href="memoryleak2"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab13: Memory leak (C heap)</h3>
+                <p style="margin:5px 0;">Native allocations via JNI aren’t freed, leaking outside the JVM heap.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Audit native code and ensure proper
+                    deallocation.</p>
+                <a class="item-lab-link" href="memoryleak3"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab14: Network socket leak</h3>
+                <p style="margin:5px 0;">Opened sockets aren’t closed, exhausting file descriptors and ports.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use try-with-resources and
+                    timeouts.</p>
+                <a class="item-lab-link" href="netsocketleak"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab15: Database connection leak</h3>
+                <p style="margin:5px 0;">Connections aren’t returned to the pool, causing outages.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Enforce pool limits and
+                    auto-closers.</p>
+                <a class="item-lab-link" href="dbconnectionleak"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab16: File descriptor leak</h3>
+                <p style="margin:5px 0;">Files/streams remain open, hitting OS descriptor limits.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Close resources
+                    deterministically.</p>
+                <a class="item-lab-link" href="filedescriptorleak" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab17: Thread leak</h3>
+                <p style="margin:5px 0;">New threads are created without bounds or proper shutdown.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use bounded executors and lifecycle
+                    hooks.</p>
+                <a class="item-lab-link" href="threadleak"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab18: Weak reference behavior</h3>
+                <p style="margin:5px 0;">Objects referenced weakly disappear after GC, altering behavior mid-flight.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Understand ref types and design for
+                    GC-sensitive flows.</p>
+                <a class="item-lab-link" href="weakreference" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab19: Mojibake</h3>
+                <p style="margin:5px 0;">Text encoding mismatches corrupt characters and locales.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Normalize UTF-8 across I/O
+                    boundaries.</p>
+                <a class="item-lab-link" href="mojibake" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab20: Integer overflow</h3>
+                <p style="margin:5px 0;">Arithmetic exceeds integer bounds, wrapping and corrupting results.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate ranges and use wider
+                    types.</p>
+                <a class="item-lab-link" href="iof"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab21: Round-off error</h3>
+                <p style="margin:5px 0;">Floating-point operations lose precision in accumulation.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use BigDecimal or error-compensating
+                    algorithms.</p>
+                <a class="item-lab-link" href="roe"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab22: Truncation error</h3>
+                <p style="margin:5px 0;">Data is cut off when converting between types or formats.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate lengths and use lossless
+                    conversions.</p>
+                <a class="item-lab-link" href="te"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab23: Loss of trailing digits</h3>
+                <p style="margin:5px 0;">Precision loss in serialization or type casting drops trailing digits.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Choose precise types and stable
+                    formats.</p>
+                <a class="item-lab-link" href="lotd"
+                   style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+        </div>
+    </div>
+</div>

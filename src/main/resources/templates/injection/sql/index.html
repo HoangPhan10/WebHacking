@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Injection</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="command-injection">
+    <h1 class="text-center mt-3 mb-5">SQL Injection</h1>
+    <div>
+        <div class="item">
+            <div class="item-lab">
+                <h3>Lab1:SQL Injection Basics Lab</h3>
+                <p>To solve the lab, get
+                    <mark>administrator's password</mark>
+                </p>
+                <p>Try account
+                    <mark>test:test!</mark>
+                </p>
+                <div class="d-flex justify-content-xl-start">
+                    <p id="button-hint" class="button-hint">Hint</p>
+                    <p id="msg-hint" class="mx-3 msg-hint">Error-based</p>
+                </div>
+                <a class="item-lab-link" th:href="@{/sql-injection/lab1}">Access the lab</a>
+            </div>
+            <div class="item-lab">
+                <h3>Lab2:SQL Injection Exploitation and Countermeasures Lab</h3>
+                <p>To solve the lab, get
+                    <mark>administrator's password</mark>
+                </p>
+                <p>Try account
+                    <mark>test:test!</mark>
+                </p>
+                <div class="d-flex justify-content-xl-start">
+                    <p id="button-hint2" class="button-hint">Hint</p>
+                    <p id="msg-hint2" class="mx-3 msg-hint">Error-based duplicate column</p>
+                </div>
+                <a class="item-lab-link" th:href="@{/sql-injection/lab2}">Access the lab</a>
+            </div>
+            <div class="item-lab">
+                <h3>Lab3: SQL Injection Demystified</h3>
+                <p>To solve the lab, get
+                    <mark>administrator's password</mark>
+                </p>
+                <p>Try account
+                    <mark>test:test!</mark>
+                </p>
+                <div class="d-flex justify-content-xl-start">
+                    <p id="button-hint3" class="button-hint">Hint</p>
+                    <p id="msg-hint3" class="mx-3 msg-hint">RCE</p>
+                </div>
+                <a class="item-lab-link" th:href="@{/sql-injection/lab3}">Access the lab</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    document.getElementById("button-hint").onclick = function () {
+        document.getElementById("msg-hint").style.display = "block";
+    };
+    document.getElementById("button-hint2").onclick = function () {
+        document.getElementById("msg-hint2").style.display = "block";
+    };
+    document.getElementById("button-hint3").onclick = function () {
+        document.getElementById("msg-hint3").style.display = "block";
+    };
+
+
+</script>
+</html>

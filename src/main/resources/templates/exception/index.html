@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Common Java Runtime Exceptions</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="command-injection">
+    <h1 class="text-center mt-3 mb-5">Common Java Runtime Exceptions</h1>
+    <div style="height:800px; overflow:auto; border:1px solid #ccc;">
+        <div class="item">
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab1: ArithmeticException</h3>
+                <p style="margin:5px 0;">Occurs when an illegal arithmetic operation is performed, such as division by
+                    zero.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Learn how to handle arithmetic errors
+                    safely.</p>
+                <a class="item-lab-link" href="ae" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab2: ArrayIndexOutOfBoundsException</h3>
+                <p style="margin:5px 0;">Thrown when trying to access an array element with an invalid index.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Practice safe array handling and
+                    bounds checking.</p>
+                <a class="item-lab-link" href="aioobe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab3: ArrayStoreException</h3>
+                <p style="margin:5px 0;">Occurs when storing an object of the wrong type into an array.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Understand type safety in arrays.</p>
+                <a class="item-lab-link" href="ase" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab4: BufferOverflowException</h3>
+                <p style="margin:5px 0;">Thrown when writing data beyond the buffer’s limit.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Learn how to manage buffer sizes
+                    correctly.</p>
+                <a class="item-lab-link" href="boe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab5: BufferUnderflowException</h3>
+                <p style="margin:5px 0;">Occurs when reading data from a buffer that has no remaining elements.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Handle buffer reads safely.</p>
+                <a class="item-lab-link" href="bue" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab6: CannotRedoException</h3>
+                <p style="margin:5px 0;">Thrown when an attempt is made to redo an operation that cannot be redone.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Understand undo/redo stack
+                    limitations.</p>
+                <a class="item-lab-link" href="cre" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab7: CannotUndoException</h3>
+                <p style="margin:5px 0;">Occurs when an attempt is made to undo an operation that cannot be undone.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Manage undo stacks safely.</p>
+                <a class="item-lab-link" href="cue" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab8: ClassCastException</h3>
+                <p style="margin:5px 0;">Thrown when casting an object to a subclass it is not an instance of.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Practice safe type casting.</p>
+                <a class="item-lab-link" href="cce" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab9: ConcurrentModificationException</h3>
+                <p style="margin:5px 0;">Occurs when a collection is modified while being iterated.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use safe iteration techniques.</p>
+                <a class="item-lab-link" href="cme" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab10: EmptyStackException</h3>
+                <p style="margin:5px 0;">Thrown when attempting to pop an element from an empty stack.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate stack operations.</p>
+                <a class="item-lab-link" href="ese" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab11: FileSystemAlreadyExistsException</h3>
+                <p style="margin:5px 0;">Occurs when trying to create a file system that already exists.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Handle file system creation
+                    safely.</p>
+                <a class="item-lab-link" href="fsaee" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab12: FileSystemNotFoundException</h3>
+                <p style="margin:5px 0;">Thrown when a file system cannot be located.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Manage file system references
+                    correctly.</p>
+                <a class="item-lab-link" href="fsnfe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab13: IllegalArgumentException</h3>
+                <p style="margin:5px 0;">Occurs when a method receives an inappropriate argument.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate method inputs.</p>
+                <a class="item-lab-link" href="iae" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab14: IllegalMonitorStateException</h3>
+                <p style="margin:5px 0;">Thrown when a thread attempts to call wait(), notify(), or notifyAll() without
+                    owning the monitor lock.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Synchronize correctly on objects
+                    before invoking wait/notify methods.</p>
+                <a class="item-lab-link" href="imse" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- IllegalPathStateException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab15: IllegalPathStateException</h3>
+                <p style="margin:5px 0;">Occurs when a path operation is invoked at an illegal time.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate graphics path usage.</p>
+                <a class="item-lab-link" href="ipse" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- IllegalStateException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab16: IllegalStateException</h3>
+                <p style="margin:5px 0;">Thrown when a method is invoked at an inappropriate time.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Ensure correct object lifecycle
+                    usage.</p>
+                <a class="item-lab-link" href="iase" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- IllegalThreadStateException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab17: IllegalThreadStateException</h3>
+                <p style="margin:5px 0;">Occurs when a thread is not in the proper state for the requested
+                    operation.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Manage thread lifecycle
+                    correctly.</p>
+                <a class="item-lab-link" href="itse" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- ImagingOpException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab18: ImagingOpException</h3>
+                <p style="margin:5px 0;">Thrown when an image processing operation fails.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Handle image operations safely.</p>
+                <a class="item-lab-link" href="imoe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- IndexOutOfBoundsException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab19: IndexOutOfBoundsException</h3>
+                <p style="margin:5px 0;">Occurs when accessing a list or array with an invalid index.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate indices before access.</p>
+                <a class="item-lab-link" href="ioobe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- InputMismatchException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab20: InputMismatchException</h3>
+                <p style="margin:5px 0;">Thrown when the input does not match the expected type or format.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate and sanitize user input.</p>
+                <a class="item-lab-link" href="ime" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- MalformedParameterizedTypeException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab21: MalformedParameterizedTypeException</h3>
+                <p style="margin:5px 0;">Occurs when a parameterized type is improperly formed.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Understand and use generics
+                    correctly.</p>
+                <a class="item-lab-link" href="mpte" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- MissingResourceException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab22: MissingResourceException</h3>
+                <p style="margin:5px 0;">Thrown when a resource bundle cannot be found.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Manage resource bundles and
+                    localization properly.</p>
+                <a class="item-lab-link" href="mre" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- NegativeArraySizeException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab23: NegativeArraySizeException</h3>
+                <p style="margin:5px 0;">Occurs when an array is created with a negative size.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate array size inputs.</p>
+                <a class="item-lab-link" href="nase" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- NoSuchElementException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab24: NoSuchElementException</h3>
+                <p style="margin:5px 0;">Thrown when trying to access an element that does not exist.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Check collection state before
+                    access.</p>
+                <a class="item-lab-link" href="nsee" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- NullPointerException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab25: NullPointerException</h3>
+                <p style="margin:5px 0;">Occurs when attempting to use a null reference.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Avoid null dereferencing with proper
+                    checks.</p>
+                <a class="item-lab-link" href="npe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- NumberFormatException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab26: NumberFormatException</h3>
+                <p style="margin:5px 0;">Thrown when an invalid string is parsed as a number.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate numeric input formats.</p>
+                <a class="item-lab-link" href="nfe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+
+            <!-- SecurityException -->
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab27: SecurityException</h3>
+                <p style="margin:5px 0;">Thrown when a security violation is detected, such as attempting an operation
+                    not permitted by the security manager.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Understand and enforce Java security
+                    policies correctly.</p>
+                <a class="item-lab-link" href="se" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access
+                    the lab</a>
+            </div>
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab28: UnsupportedCharsetException</h3>
+                <p style="margin:5px 0;">Thrown when a requested character set is not supported by the JVM.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use valid and supported charsets, and handle unsupported cases gracefully.</p>
+                <a class="item-lab-link" href="uce" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab29: UnsupportedOperationException</h3>
+                <p style="margin:5px 0;">Occurs when an operation is not supported by the object, such as modifying an immutable collection.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Recognize unsupported operations and design code to handle them safely.</p>
+                <a class="item-lab-link" href="uoe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+        </div>
+    </div>
+</div>

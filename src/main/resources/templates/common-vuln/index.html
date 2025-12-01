@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Common Application Troubles and Risks</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/command-injection/index.css}">
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="command-injection">
+    <h1 class="text-center mt-3 mb-5">Common Web Application Vulnerabilities and Security Risks</h1>
+    <div style="height:800px; overflow:auto; border:1px solid #ccc;">
+        <div class="item">
+        <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab1: XSS (Cross Site Scripting)</h3>
+                <p style="margin:5px 0;">Malicious scripts can be injected into web pages, allowing attackers to steal cookies or manipulate content.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Learn how to detect and prevent XSS attacks.</p>
+                <a class="item-lab-link" href="xss" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab2: SQL Injection</h3>
+                <p style="margin:5px 0;">Unsanitized input lets attackers manipulate database queries, exposing or altering sensitive data.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Practice secure query handling and input validation.</p>
+                <a class="item-lab-link" href="sqlijc" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab3: LDAP Injection</h3>
+                <p style="margin:5px 0;">Crafted input can change LDAP queries, enabling unauthorized access or directory manipulation.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Understand LDAP query sanitization and secure directory access.</p>
+                <a class="item-lab-link" href="admins/main?logintype=ldapijc" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab4: Code Injection</h3>
+                <p style="margin:5px 0;">User input is executed as code, potentially giving attackers control over application logic.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Prevent execution of untrusted input in application logic.</p>
+                <a class="item-lab-link" href="codeijc" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab5: OS Command Injection</h3>
+                <p style="margin:5px 0;">Input is passed to system commands, allowing attackers to run arbitrary commands on the server.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Learn to sanitize inputs and avoid unsafe system calls.</p>
+                <a class="item-lab-link" href="commandijc" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab6: Expression Language Injection</h3>
+                <p style="margin:5px 0;">Attackers inject EL expressions that execute within the application, exposing data or functions.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Secure template engines and validate dynamic expressions.</p>
+                <a class="item-lab-link" href="elijc" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab7: Mail Header Injection</h3>
+                <p style="margin:5px 0;">Malicious input alters email headers, enabling spam or phishing attacks.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate email inputs and prevent header manipulation.</p>
+                <a class="item-lab-link" href="mailheaderijct" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab8: Null Byte Injection</h3>
+                <p style="margin:5px 0;">Null characters in input can bypass validation and access unintended files or code paths.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Handle string termination safely and sanitize inputs.</p>
+                <a class="item-lab-link" href="nullbyteijct" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab9: DoS Attack</h3>
+                <p style="margin:5px 0;">Lack of upload size limits allows attackers to overload resources, causing denial of service.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Implement resource limits to prevent denial of service.</p>
+                <a class="item-lab-link" href="ursupload" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab10: Pivoting</h3>
+                <p style="margin:5px 0;">No file extension checks mean attackers can upload dangerous executables or scripts.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Enforce file type restrictions for safe uploads.</p>
+                <a class="item-lab-link" href="ureupload" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab11: Open Redirect</h3>
+                <p style="margin:5px 0;">Manipulated URLs redirect users to malicious sites, aiding phishing attacks.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Prevent unsafe redirects and validate destination URLs.</p>
+                <a class="item-lab-link" href="admins/main?logintype=openredirect&amp;goto=/serverinfo" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab12: Brute-force Login</h3>
+                <p style="margin:5px 0;">Without account lockout, repeated login attempts can guess valid credentials.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Implement account lockout and rate limiting mechanisms.</p>
+                <a class="item-lab-link" href="admins/main?logintype=bruteforce" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab13: Session Hijacking</h3>
+                <p style="margin:5px 0;">Attackers steal session IDs to impersonate users and gain unauthorized access.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Secure session management and use HTTPS-only cookies.</p>
+                <a class="item-lab-link" href="admins/seshj" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab14: Session Fixation</h3>
+                <p style="margin:5px 0;">Users are forced to use a known session ID, which attackers can exploit.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Regenerate session IDs after login to prevent fixation.</p>
+                <a class="item-lab-link" th:href="@{'admins/main?logintype=sessionfixation'}" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab15: Man-in-the-middle Attack</h3>
+                <p style="margin:5px 0;">Unencrypted HTTP requests expose credentials to interception during transmission.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Enforce HTTPS to protect data in transit.</p>
+                <a class="item-lab-link" href="admins/status?logintype=status" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab16: Local File Inclusion</h3>
+                <p style="margin:5px 0;">Input can load local files, exposing sensitive server data or executing code.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Validate file paths and restrict file access.</p>
+                <a class="item-lab-link" href="/lfi/index.jsp?template=style_bootstrap.html" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab17: SSRF (Server Side Request Forgery)</h3>
+                <p style="margin:5px 0;">Attackers trick the server into making requests to internal or external systems.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Restrict outbound requests and validate URLs.</p>
+                <a class="item-lab-link" href="/ssrf/index.jsp?template=basic" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab18: Unintended File Disclosure</h3>
+                <p style="margin:5px 0;">Misconfigurations allow unauthorized access to files containing sensitive information.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Configure file permissions and restrict directory access.</p>
+                <a class="item-lab-link" href="/unintendedfiledisclosure" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab19: CSRF (Cross-site Request Forgery)</h3>
+                <p style="margin:5px 0;">Attackers trick users into performing unwanted actions while authenticated.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Use CSRF tokens to protect sensitive actions.</p>
+                <a class="item-lab-link" href="/admins/csrf" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab20: Clickjacking</h3>
+                <p style="margin:5px 0;">Hidden frames trick users into clicking malicious buttons or links.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Implement frame-busting and X-Frame-Options headers.</p>
+                <a class="item-lab-link" href="/admins/clickjacking" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab21: CSS Injection</h3>
+                <p style="margin:5px 0;">Malicious CSS alters page appearance or steals sensitive information via styling tricks.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Sanitize style inputs and restrict CSS injection.</p>
+                <a class="item-lab-link" href="/admins/cssinject" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab22: XEE (XML Entity Expansion)</h3>
+                <p style="margin:5px 0;">Recursive XML entities consume resources, leading to denial of service.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Disable entity expansion in XML parsers.</p>
+                <a class="item-lab-link" href="xee" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab23: XXE (XML External Entity)</h3>
+                <p style="margin:5px 0;">External entities in XML expose files or internal network resources.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Disable external entity processing to protect sensitive files and networks.</p>
+                <a class="item-lab-link" href="xxe" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+
+            <div class="item-lab" style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:6px;">
+                <h3 style="color:#2c3e50;">Lab24: Prompt Injection</h3>
+                <p style="margin:5px 0;">Malicious input manipulates prompts or instructions, causing unintended application behavior.</p>
+                <p style="margin:5px 0; font-style:italic; color:#555;">Objective: Safeguard interactive systems against manipulated instructions.</p>
+                <a class="item-lab-link" href="promptinjection" style="color:#2980b9; text-decoration:none; font-weight:bold;">Access the lab</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    document.getElementById("button-hint").onclick = function () {
+        document.getElementById("msg-hint").style.display = "block";
+    };
+    document.getElementById("button-hint2").onclick = function () {
+        document.getElementById("msg-hint2").style.display = "block";
+    };
+    document.getElementById("button-hint3").onclick = function () {
+        document.getElementById("msg-hint3").style.display = "block";
+    };
+
+
+</script>
+</html>
