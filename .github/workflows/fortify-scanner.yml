@@ -25,8 +25,8 @@ jobs:
         run: mvn clean install -DskipTests
 
       # Perform Fortify on Demand SAST + SCA scan and import SAST results into GitHub code scanning alerts
-      - name: Run FoD SAST Scan
-        uses: fortify/github-action@v1
+      - name: Run Fortify on Demand SAST & SCA Scan
+        uses: fortify/github-action@v2
         with:
           sast-scan: true
           debricked-sca-scan: true
